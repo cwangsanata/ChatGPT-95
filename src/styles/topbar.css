@@ -1,0 +1,11 @@
+.window-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon {
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+}
