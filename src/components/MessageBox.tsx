@@ -1,4 +1,7 @@
 import React from 'react';
+import { ScrollView } from 'react95';
+
+import '../styles/MessageBox.css';
 
 interface Message {
   role: string;
@@ -11,16 +14,15 @@ interface MessagesScrollViewProps {
 
 const MessageBox: React.FC<MessagesScrollViewProps> = ({ messages }) => {
   return (
-    <div 
-      className="messages-box"
-      ref={ref => ref?.scrollIntoView({ behavior: 'smooth' })}
-      style={{ width: '100%', height: '75vh', overflowY: 'auto' }}
-    >
-      {messages.map((message, index) => (
-        <p key={index} style={{ fontWeight: message.role === 'assistant' ? 'bold' : 'normal' }}>
-          <strong>{message.role === 'assistant' ? 'Assistant' : 'You'}:</strong> {message.content}
-        </p>
-      ))}
+    <div className='message-box-container'>
+        <ScrollView className='message-box'>
+            {messages.map((message, index) => (
+                <p key={index}>
+                <strong className='message-user'>{message.role === 'assistant' ? 'Assistant' : 'You'}:</strong> 
+                <p className='message-content'>{message.content}</p>
+                </p>
+            ))}
+        </ScrollView>
     </div>
   );
 };

@@ -56,3 +56,12 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+html::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar for Chrome, Safari, and newer Edge */
+}
+
+html {
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and old Edge */
+  scrollbar-width: none;     /* Hide scrollbar for Firefox */
+}

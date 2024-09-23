@@ -18,7 +18,8 @@ const MessageInput: React.FC<MessageInputProps> = ({ input, setInput, handleSend
             onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setInput(e.target.value)}
             placeholder="Type your message here..."
             rows={4}
-            maxLength={4096}
+            multiline={false}
+            maxLength={2048}
             />
         <Button className='send-button' onClick={handleSendMessage}>Send</Button>
         </div>

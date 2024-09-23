@@ -3,12 +3,16 @@
     align-items: center;
     gap: 1rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 .message-input {
     cursor: text;
     flex: 1;
+    min-width: none;
+    height: 1rem;
+    max-height: 2.5rem;
+    resize: none;
+    overflow-y: auto;
 }
 
 .send {

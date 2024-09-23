@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body, input, select, textarea {
       font-family: 'ms_sans_serif';
+      'font-size': '16px';
     }
 `;
 

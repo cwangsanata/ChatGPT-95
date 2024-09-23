@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Window, WindowContent, GroupBox, Frame, ScrollView } from 'react95';
+import { Window, WindowContent, GroupBox } from 'react95';
 import { ThemeProvider } from 'styled-components';
 
 import original from 'react95/dist/themes/original';
@@ -49,7 +49,8 @@ const App: React.FC = () => {
         <Window
           style={{
             width: '100vw',
-            height: '100vh',
+            minHeight: '50vh',
+            maxWidth: '100%',
           }}
         >
           <TopBar />
