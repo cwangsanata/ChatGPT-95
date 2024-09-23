@@ -8,4 +8,4 @@ Future Features:
   - Add separate sessions 
   - Add a user login feature
   - Implement a DB for persistence
-  - Beg for money
+  - Add background image of logo, plus text 
