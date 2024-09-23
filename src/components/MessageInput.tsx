@@ -10,6 +10,12 @@ interface MessageInputProps {
 }
 
 const MessageInput: React.FC<MessageInputProps> = ({ input, setInput, handleSendMessage }) => {
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter') {
+            handleSendMessage();
+        }
+    };
+
     return (
         <div className='message-input-container'>
         <TextInput
@@ -20,6 +26,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ input, setInput, handleSend
             rows={4}
             multiline={false}
             maxLength={2048}
+            onKeyDown={handleKeyDown}
             />
         <Button className='send-button' onClick={handleSendMessage}>Send</Button>
         </div>
