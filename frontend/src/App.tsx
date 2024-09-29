@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Window, WindowContent, GroupBox } from 'react95';
 import { ThemeProvider } from 'styled-components';
+import axios from 'axios';
 
 import original from 'react95/dist/themes/original';
 import GlobalStyles from './components/GlobalStyle';
@@ -23,21 +24,21 @@ const App: React.FC = () => {
     // Add user message to the messages array
     setMessages([...messages, { role: 'user', content: input }]);
 
-    // TODO: Fetch the response from the ChatGPT API
-    // const response = await fetch('/api/chat', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ message: input }),
-    // });
-
-    // const data = await response.json();
+    // Send a POST request to the backend server
+    // TODO: Add the correct URL and error handling
+    const response = await axios.post('http://localhost:3000/send', { 
+      user: 'user',
+      message: input 
+    });
+    const data = response.data;
+    console.log(data.message);
 
     // TODO: Add the assistant's response to the messages array
-    // setMessages(prev => [
-    //   ...prev,
-    //   { role: 'user', content: input },
-    //   { role: 'assistant', content: data.reply },
-    // ]);
+    setMessages(prev => [
+      ...prev,
+      { role: 'user', content: input },
+      { role: 'assistant', content: data.message },
+    ]);
 
     setInput(''); // Clear the input field
   };
