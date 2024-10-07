@@ -8,6 +8,7 @@ import GlobalStyles from './components/GlobalStyle';
 import TopBar from './components/TopBar';
 import MessageInput from './components/MessageInput';
 import MessageBox from './components/MessageBox';
+import LoginModal from './components/LoginModal';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -44,6 +45,7 @@ const App: React.FC = () => {
     <>
       <GlobalStyles />
       <ThemeProvider theme={original}>
+        <LoginModal />
         <Window
           style={{
             width: '100vw',
