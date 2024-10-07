@@ -19,6 +19,7 @@ const App: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
 
   const handleSendMessage = async () => {
+    setInput('');
     if (!input.trim()) return;
 
     // Add user message to the messages array
@@ -31,15 +32,12 @@ const App: React.FC = () => {
       message: input 
     });
     const data = response.data;
-    console.log(data.message);
 
     // Add the assistant's response to the messages array
     setMessages(prev => [
       ...prev,
       { role: 'assistant', content: data.message },
     ]);
-
-    setInput(''); // Clear the input field
   };
 
   return (

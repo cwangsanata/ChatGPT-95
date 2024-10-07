@@ -12,6 +12,7 @@ interface MessageInputProps {
 const MessageInput: React.FC<MessageInputProps> = ({ input, setInput, handleSendMessage }) => {
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {
+            setInput('');
             handleSendMessage();
         }
     };
