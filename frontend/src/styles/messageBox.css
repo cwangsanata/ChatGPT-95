@@ -12,7 +12,17 @@
 }
 
 .message-user {
-    color: darkred;
-    font-weight: bold;
+  font-weight: bold;
 }
 
+.message-content {
+  margin-left: 8px;
+}
+
+.message-user.assistant {
+  color: blue; /* Color for assistant messages */
+}
+
+.message-user.user {
+  color: darkred; /* Color for user messages */
+}
