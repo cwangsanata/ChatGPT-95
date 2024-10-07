@@ -45,7 +45,6 @@ const App: React.FC = () => {
     <>
       <GlobalStyles />
       <ThemeProvider theme={original}>
-        <LoginModal />
         <Window
           style={{
             width: '100vw',
@@ -67,6 +66,7 @@ const App: React.FC = () => {
             </GroupBox>
           </WindowContent>
         </Window>
+        <LoginModal />
       </ThemeProvider>
     </>
   );
