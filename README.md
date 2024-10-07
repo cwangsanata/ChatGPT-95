@@ -2,7 +2,7 @@ TODO:
   - Add back the scroll bar to the message box
   - Add a chatGPT inspired logo
   - Add more buttons
-  - PRIORITY: Implement the backend
+  - CLEANUP BACKEND
 
 Future Features:
   - Add separate sessions 
