@@ -33,10 +33,9 @@ const App: React.FC = () => {
     const data = response.data;
     console.log(data.message);
 
-    // TODO: Add the assistant's response to the messages array
+    // Add the assistant's response to the messages array
     setMessages(prev => [
       ...prev,
-      { role: 'user', content: input },
       { role: 'assistant', content: data.message },
     ]);
 
@@ -56,7 +55,7 @@ const App: React.FC = () => {
         >
           <TopBar />
           <WindowContent>
-            <GroupBox label="ChatGPT">
+            <GroupBox label="ChatGPT-95">
               <MessageBox 
                 messages={messages}
               />
