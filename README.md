@@ -3,9 +3,9 @@ TODO:
   - Add a chatGPT inspired logo
   - Add more buttons
   - CLEANUP BACKEND
+  - IMPORTANT: Add persistent data on sqllite
 
 Future Features:
   - Add separate sessions 
   - Add a user login feature
-  - Implement a DB for persistence
   - Add background image of logo, plus text 
