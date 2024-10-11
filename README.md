@@ -2,7 +2,7 @@
 
 Miss the old days? Tired of corporate UX design? Introducing ChatGPT-95! 
 
-![ChatGPT-95, early stages](https://imgur.com/a/RWZMiis)
+![ChatGPT-95, early stages](https://i.imgur.com/RnJSD5Z.png)
 
 ## ✨ Features
 - **Retro Vibes**: Experience a delightful blast from the past with our Windows 95-inspired UI.
