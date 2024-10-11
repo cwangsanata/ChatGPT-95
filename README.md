@@ -32,7 +32,7 @@ Ready to jump in? Here’s how you can get started:
   ```
 3. **Create a .env in backend/config and add your OpenAPI key**
 ```bash
-REACT_APP_OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY=your_api_key_here
 ```
 4. **Fire up the app in the backend directory with**
 ```bash
